@@ -1,0 +1,29 @@
+prototype(Ttree.LearnNeosCustomNode:Product.Document) < prototype(Ttree.LearnNeosCustomNode:DefaultPage) {
+    body.content.main >
+    body.content.main = Fusion:Array {
+        header = Ttree.LearnNeosCustomNode:Product.DocumentHeader
+        price  = Ttree.LearnNeosCustomNode:Product.Price
+        main   = Ttree.LearnNeosCustomNode:Product.PrimaryContent
+        footer = Ttree.LearnNeosCustomNode:Product.DocumentFooter
+    }
+}
+
+prototype(Ttree.LearnNeosCustomNode:Product.DocumentHeader) < prototype(Fusion:Tag) {
+    tagName = 'h2'
+    content = 'Custom product rendering'
+}
+
+prototype(Ttree.LearnNeosCustomNode:Product.PrimaryContent) < prototype(Neos:PrimaryContent) {
+    nodePath = 'main'
+}
+
+prototype(Ttree.LearnNeosCustomNode:Product.DocumentFooter) < prototype(Fusion:Tag) {
+    tagName = 'footer'
+    content = 'Product footer'
+}
+
+prototype(Ttree.LearnNeosCustomNode:Product.Price) < prototype(Fusion:Tag) {
+    tagName = 'div'
+    content = ${node.discountedPrice}
+    content.@process.appendCurrency = ${value + ' €'}
+}

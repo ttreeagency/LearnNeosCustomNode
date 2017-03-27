@@ -1,0 +1,26 @@
+'Ttree.LearnNeosCustomNode:Product':
+  class: Ttree\LearnNeosCustomNode\Domain\Model\ProductNode
+  superTypes:
+    'Neos.NodeTypes:Page': true
+  ui:
+    label: 'Product'
+    icon: 'icon-gift'
+  properties:
+    price:
+      type: integer
+      defaultValue: 0
+      ui:
+        label: 'Normal Price'
+        reloadIfChanged: true
+        inspector:
+          group: document
+          position: 100
+    discount:
+      type: integer
+      defaultValue: 0
+      ui:
+        label: 'Discount (%)'
+        reloadIfChanged: true
+        inspector:
+          group: document
+          position: 110

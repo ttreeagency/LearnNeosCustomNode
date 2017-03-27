@@ -1,0 +1,19 @@
+{
+    "name": "ttree/learnneoscustomnode",
+    "description": "Learn Neos: Create custom node implementation to store your business logic",
+    "type": "neos-package",
+    "require": {
+        "neos/demo": "^3.0.0",
+        "ttree/fusion-documentfinder": "^1.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ttree\\LearnNeosCustomNode\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Ttree.LearnNeosCustomNode"
+        }
+    }
+}

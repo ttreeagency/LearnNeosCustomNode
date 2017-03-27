@@ -1,0 +1,4 @@
+namespace: Neos = Neos.Neos
+namespace: Fusion = Neos.Fusion
+
+include: NodeTypes/*

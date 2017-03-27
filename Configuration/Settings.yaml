@@ -1,0 +1,12 @@
+Ttree:
+  Fusion:
+    DocumentFinder:
+      documentPrototype:
+        fallback: 'Ttree.LearnNeosCustomNode:DefaultPage'
+
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        Ttree.LearnNeosCustomNode: true
+
